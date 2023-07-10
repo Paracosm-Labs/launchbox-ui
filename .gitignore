@@ -12,6 +12,7 @@
 /build
 
 # misc
+/src/personas
 .DS_Store
 .env.local
 .env.development.local

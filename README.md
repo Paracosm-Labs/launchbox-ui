@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# LaunchBox
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LaunchBox is a business simulation game designed to educate and empower entrepreneurs. In this game, players learn the ins and outs of running various micro business types, along with an introduction to applied uses of blockchain technology for their business, guided by an AI Advisor.
 
-## Available Scripts
+Progress on TronDAO forum:
+https://forum.trondao.org/t/launchbox-business-builder-aia/19478/
 
-In the project directory, you can run:
+The app is currently structured into several key directories:
 
-### `npm start`
+- `src/adapters`: This directory contains the adapters for integrating with external services like the OpenAI API.
+- `src/components`: This directory contains the reusable React components used throughout the application.
+- `src/pages`: This directory contains the page components that make up the different screens of the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+To get the project up and running on your local machine, follow these steps:
 
-### `npm test`
+1. Clone the repository:
+`git clone https://github.com/Paracosm-Labs/launchbox-ui.git`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+2. Navigate into the project directory:
+`cd launchbox-ui`
 
-### `npm run build`
+3. Install the project dependencies:
+`npm install`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Start the development server:
+`npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The application should now be running at your `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+We welcome contributions to LaunchBox. Whether it's a bug report, new feature, correction, or additional documentation, we greatly value your feedback and contributions. Please fork this repository and create a pull request with your changes.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## License
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is licensed under the MIT License.

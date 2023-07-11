@@ -4,6 +4,7 @@ function Chat() {
   const [messages, setMessages] = useState([]);
   const [isListening, setIsListening] = useState(false);
   const recognition = useRef(null);
+  const [input, setInput] = useState('');
 
   useEffect(() => {
     if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
@@ -12,7 +13,8 @@ function Chat() {
       recognition.current.onresult = (event) => {
         for (let i = event.resultIndex; i < event.results.length; i++) {
           if (event.results[i].isFinal) {
-            handleSendMessage(event.results[i][0].transcript);
+            // handleSendMessage(event.results[i][0].transcript);
+            setInput(event.results[i][0].transcript);
           }
         }
       };
@@ -32,6 +34,7 @@ function Chat() {
     setMessages([...messages, { text: message, sender: 'user' }]);
     // Here you would typically send the message to your backend or AI model
     // and then add the response to the messages array.
+    setInput('');
   };
 
   const toggleListen = () => {
@@ -53,15 +56,13 @@ function Chat() {
             <div className="col">
               <div className="chat-input bottom-fixed p-3">
                 <div className="input-group">
-                  <input type="textarea" className="form-control" placeholder="Type your message here..." onKeyPress={(event) => {
+                  <input type="textarea" value={input} onChange={e => setInput(e.target.value)} className="form-control" placeholder="Type your message here..." onKeyPress={(event) => {
                     if (event.key === 'Enter') {
                       handleSendMessage(event.target.value);
-                      event.target.value = '';
                     }
                   }} />
                   <button className="send-button" onClick={() => {
                     handleSendMessage(document.querySelector('.chat-input input').value);
-                    document.querySelector('.chat-input input').value = '';
                   }}>
                     <i className="fa fa-lg fa-paper-plane"></i>
                   </button>

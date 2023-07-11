@@ -41,22 +41,40 @@ function Chat() {
 
   return (
     <div className="chat-window">
-      <div className="chat-messages mb-3">
+      <div className="chat-messages mb-3 text-start">
         {messages.map((message, index) => (
           <div key={index} className={`chat-message ${message.sender}`}>
             {message.text}
           </div>
         ))}
       </div>
-      <div className="chat-input">
-        <input type="textarea" className="form-control" placeholder="Type your message here..." onKeyPress={(event) => {
-          if (event.key === 'Enter') {
-            handleSendMessage(event.target.value);
-            event.target.value = '';
-          }
-        }} />
-        <button className="btn btn-outline-info m-3" onClick={toggleListen}>{isListening ? 'Listening...' : 'Start Speaking'}</button>
-      </div>
+
+         <div className="row">
+            <div className="col">
+              <div className="chat-input bottom-fixed p-3">
+                <div className="input-group">
+                  <input type="textarea" className="form-control" placeholder="Type your message here..." onKeyPress={(event) => {
+                    if (event.key === 'Enter') {
+                      handleSendMessage(event.target.value);
+                      event.target.value = '';
+                    }
+                  }} />
+                  <button className="send-button" onClick={() => {
+                    handleSendMessage(document.querySelector('.chat-input input').value);
+                    document.querySelector('.chat-input input').value = '';
+                  }}>
+                    <i className="fa fa-lg fa-paper-plane"></i>
+                  </button>
+                </div>
+                  <button className="btn btn-outline-info m-3" onClick={toggleListen}>{isListening ? 'Listening...' : 'Start Speaking'}</button>
+              </div>
+            </div>
+            <div className="col-md-3 d-md-block d-sm-none">
+
+            </div>
+          </div>
+
+
     </div>
   );
 }

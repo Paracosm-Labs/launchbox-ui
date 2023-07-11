@@ -13,8 +13,27 @@ code {
 }
 
 
+/* Track */
+::-webkit-scrollbar {
+  width: 5px; /* Set the width of the scrollbar */
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; /* Set the color of the scrollbar handle */
+  border-radius: 36px!important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Set the color of the scrollbar handle on hover */
+}
+
+
 .bg{
   background-color: #232323;
+  overflow-x: hidden;
 }
 
 
@@ -33,5 +52,43 @@ padding: 2em;
 
 .chat-messages{
 /*  border: 1px solid #eee;*/
-  min-height: 500px;
+  max-height: 550px;
+  overflow-x: auto;
+}
+
+.chat-input.bottom-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 55%;
+  background-color: #232323;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.chat-message.user{
+padding: 10px;
+margin:10px;
+background-color: #26262655;
+border-radius: 12px;
+}
+
+
+.input-group {
+  padding-top:1em;
+  position: relative;
+}
+
+.input-group input {
+  padding-right: 50px;
+  height: 50px;
+  border-radius: 12px!important;
+}
+
+.send-button {
+  position: absolute;
+  right: 12px;
+  top: 16px;
+  border: none;
+  background: none;
+  z-index: 100;
+  padding: 12px;
 }

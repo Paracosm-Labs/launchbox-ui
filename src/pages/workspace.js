@@ -19,11 +19,11 @@ function Workspace({ course }) {
           </div>
           <div className="col me-3 main-content">
 	       <div className="row">
-	          <div className="col-md-9">
+	          <div className="col">
 		        <h1>Workspace</h1>
 		        <ChatWindow />
 	          </div>
-	          <div className="col-md-3">
+	          <div className="col-md-3 d-md-block d-sm-none">
 	            <QuickActions />
 	          </div>
           </div>

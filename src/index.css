@@ -45,6 +45,10 @@ code {
 }
 
 
+.course-card{
+  height:480px;
+}
+
 
 .chat-window{
 padding: 2em;

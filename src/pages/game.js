@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../components/navbar';
+import Course from '../components/course';
 import Sidenav from '../components/sidenav';
 import QuickActions from '../components/quickActions';
 
@@ -14,10 +14,11 @@ function Game() {
           <div className="col-md-2 d-none d-md-block d-sm-none">
             <Sidenav />
           </div>
-          <div className="col-md-8 main-content">
-	    	<Navbar />
+          <div className="col-md-8 main-content pt-5">
+	    	
 	        <h1>Welcome to LaunchBox</h1>
-	        
+	        <h4>Choose Your Experience</h4>
+	        <Course />
           </div>
           <div className="col-md-2 d-none d-md-block d-sm-none">
             <QuickActions />

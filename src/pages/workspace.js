@@ -1,20 +1,41 @@
 import React from 'react';
-import Navbar from '../components/navbar';
+import Sidenav from '../components/sidenav';
+// import Navbar from '../components/navbar';
 import CourseContent from '../components/courseContent';
 import CourseOverview from '../components/courseOverview';
 import CourseQuiz from '../components/courseQuiz';
 
 function Workspace({ course }) {
   return (
-    <div>
-    	<h1>Workspace!!!!</h1>
-      	<Navbar />
+
+    <div className="mt-3">
       	
+
+
+      <div className="container-fluid mt-3">
+        <div className="row text-center text-white">
+          <div className="col-md-2 d-none d-md-block d-sm-none">
+            <Sidenav />
+          </div>
+          <div className="col-md-8 main-content">
+	        <h1>Workspace</h1>
+          </div>
+          <div className="col-md-2 d-none d-md-block d-sm-none">
+            Team and Actions
+          </div>
+        </div>
+      </div>
+
       {/* <CourseOverview overview={course.overview} />
       <CourseContent content={course.content} />
       <CourseQuiz quiz={course.quiz} /> */}
 
+
     </div>
+
+
+
+    
   );
 }
 

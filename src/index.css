@@ -20,7 +20,18 @@ code {
 
 .main-content{
   background-color: #363636;
-  border-radius: 15px;
+  border-radius: 18px;
   min-height: 800px;
   border:2px solid rgba(33,33,33,.5);
+}
+
+
+
+.chat-window{
+padding: 2em;
+}
+
+.chat-messages{
+/*  border: 1px solid #eee;*/
+  min-height: 500px;
 }

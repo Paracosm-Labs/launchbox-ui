@@ -16,7 +16,7 @@ function Staking() {
 	        <h1>Staking</h1>
           </div>
           <div className="col-md-2 d-none d-md-block d-sm-none">
-            Team and Actions
+            Quick Actions
           </div>
         </div>
       </div>

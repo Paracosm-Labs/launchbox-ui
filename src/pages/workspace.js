@@ -4,24 +4,29 @@ import Sidenav from '../components/sidenav';
 import CourseContent from '../components/courseContent';
 import CourseOverview from '../components/courseOverview';
 import CourseQuiz from '../components/courseQuiz';
+import ChatWindow from '../components/chat';
+import QuickActions from '../components/quickActions';
 
 function Workspace({ course }) {
   return (
 
     <div className="mt-3">
-      	
-
 
       <div className="container-fluid mt-3">
         <div className="row text-center text-white">
           <div className="col-md-2 d-none d-md-block d-sm-none">
             <Sidenav />
           </div>
-          <div className="col-md-8 main-content">
-	        <h1>Workspace</h1>
+          <div className="col me-3 main-content">
+	       <div className="row">
+	          <div className="col-md-9">
+		        <h1>Workspace</h1>
+		        <ChatWindow />
+	          </div>
+	          <div className="col-md-3">
+	            <QuickActions />
+	          </div>
           </div>
-          <div className="col-md-2 d-none d-md-block d-sm-none">
-            Team and Actions
           </div>
         </div>
       </div>

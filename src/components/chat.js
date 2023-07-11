@@ -16,6 +16,12 @@ function Chat() {
           }
         }
       };
+      recognition.current.onstart = () => {
+        setIsListening(true);
+      };
+      recognition.current.onend = () => {
+        setIsListening(false);
+      };
     } else {
       console.log('Speech recognition not supported');
       alert("not supported");
@@ -26,16 +32,11 @@ function Chat() {
     setMessages([...messages, { text: message, sender: 'user' }]);
     // Here you would typically send the message to your backend or AI model
     // and then add the response to the messages array.
-    alert(message);
   };
 
   const toggleListen = () => {
     setIsListening(!isListening);
-    if (isListening) {
-      recognition.current.start();
-    } else {
-      recognition.current.stop();
-    }
+    recognition.current.start();    
   };
 
   return (
@@ -54,7 +55,7 @@ function Chat() {
             event.target.value = '';
           }
         }} />
-        <button className="btn btn-outline-info m-3" onClick={toggleListen}>{isListening ? 'Stop' : 'Start Speaking'}</button>
+        <button className="btn btn-outline-info m-3" onClick={toggleListen}>{isListening ? 'Listening...' : 'Start Speaking'}</button>
       </div>
     </div>
   );

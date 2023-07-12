@@ -49,30 +49,35 @@ code {
 }
 
 .course-card{
-  height:480px;
+/*  height:420px;*/
 }
 
 
 .chat-window{
-padding: 2em;
+/*padding: 2em;*/
 }
 
 .chat-messages{
 /*  border: 1px solid #eee;*/
-  max-height: 550px;
+  max-height: 500px;
   overflow-x: auto;
 }
 
 .chat-input.bottom-fixed {
-  position: fixed;
-  bottom: 0;
-  width: 55%;
-  background-color: #232323;
+/*  position: relative;
+  bottom: 14px;
+  width: 100%;*/
+  background-color: #363636;
   border-radius: 15px 15px 0px 0px;
 }
 
 .chat-message.user{
-padding: 10px;
+margin:10px;
+background-color: #26262655;
+border-radius: 12px;
+}
+
+.chat-message.aia{
 margin:10px;
 background-color: #26262655;
 border-radius: 12px;
@@ -84,10 +89,18 @@ border-radius: 12px;
   position: relative;
 }
 
-.input-group input {
+.chat-input .input-group input:focus {
+background-color: #232323;
+color:#fff;
+}
+
+.chat-input .input-group input {
   padding-right: 50px;
   height: 50px;
   border-radius: 12px!important;
+  background-color: #232323;
+  border-color: #232323!important;
+  color:#fff;
 }
 
 .send-button {

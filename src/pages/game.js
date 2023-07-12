@@ -27,8 +27,6 @@ function Game() {
       </div>
 
 
-
-
     </div>
   );
 }

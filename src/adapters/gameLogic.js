@@ -1,9 +1,4 @@
-// Import necessary libraries or APIs
-import axios from 'axios'; // For making HTTP requests to OpenAI API
 
-// Constants
-const OPENAI_API_URL = 'https://api.openai.com/v1/engines/davinci-codex/completions'; // OpenAI API URL
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY; // Your OpenAI API key
 
 // Function to initialize a new game
 export function initializeGame(player) {
@@ -18,8 +13,8 @@ export function handlePlayerAction(action) {
 }
 
 // Function to communicate with OpenAI API
-export function communicateWithOpenAI(prompt) {
-  // Make a POST request to the OpenAI API with the prompt
+export function communicateWithOpenAI(message) {
+  // Make a POST request to the OpenAI API with the message
   // The response will be the AI's output
   // You will need to handle errors and edge cases
 }

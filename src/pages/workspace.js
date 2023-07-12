@@ -11,22 +11,20 @@ function Workspace({ course }) {
   return (
 
     <div className="mt-3">
+      	
+
 
       <div className="container-fluid mt-3">
         <div className="row text-center text-white">
           <div className="col-md-2 d-none d-md-block d-sm-none">
             <Sidenav />
           </div>
-          <div className="col me-3 main-content">
-	       <div className="row">
-	          <div className="col">
-		        <h1>Workspace</h1>
-		        <ChatWindow />
-	          </div>
-	          <div className="col-md-3 d-md-block d-sm-none">
-	            <QuickActions />
-	          </div>
+          <div className="col-md-8 main-content">
+	        <h1>Workspace</h1>
+	        <ChatWindow />
           </div>
+          <div className="col-md-2 d-none d-md-block d-sm-none">
+            <QuickActions />
           </div>
         </div>
       </div>

@@ -135,7 +135,7 @@ const handleSpeakClick = () => {
       />
     </div>
     </div>
-    <div className="row">
+    <div className="row  mt-3">
     <div className="col text-center">
       <div className="form-check form-switch text-start">
         <input className="form-check-input bg-success" type="checkbox" id="autoSpeakToggle" checked={autoSpeak} onChange={() => setAutoSpeak(!autoSpeak)} />

@@ -53,15 +53,15 @@ code {
 }
 
 
-.chat-window{
+.cs-chat-container, .chat-window{
 /*padding: 2em;*/
+  min-height: 630px;
+  max-height: 640px;
+/*  height: 90%!important;*/
+  background-color: #26262655!important;
+  border-radius: 12px;
 }
 
-.chat-messages{
-/*  border: 1px solid #eee;*/
-  max-height: 500px;
-  overflow-x: auto;
-}
 
 .chat-input.bottom-fixed {
 /*  position: relative;
@@ -77,9 +77,10 @@ background-color: #26262655;
 border-radius: 12px;
 }
 
-.chat-message.aia{
+.chat-message.aia, .cs-message-list, .cs-message-input, .cs-typing-indicator{
+border-top:none!important;
 margin:10px;
-background-color: #26262655;
+background-color: transparent!important;
 border-radius: 12px;
 }
 
@@ -101,14 +102,4 @@ color:#fff;
   background-color: #232323;
   border-color: #232323!important;
   color:#fff;
-}
-
-.send-button {
-  position: absolute;
-  right: 12px;
-  top: 16px;
-  border: none;
-  background: none;
-  z-index: 100;
-  padding: 12px;
 }

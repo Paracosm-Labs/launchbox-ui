@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Sidenav from '../components/sidenav';
 // import Navbar from '../components/navbar';
 import CourseContent from '../components/courseContent';
@@ -8,6 +8,7 @@ import ChatWindow from '../components/chat';
 import QuickActions from '../components/quickActions';
 
 function Workspace({ course }) {
+	const [quickActions, setQuickActions] = useState([]);
   return (
 
     <div className="mt-3">
@@ -15,16 +16,16 @@ function Workspace({ course }) {
 
 
       <div className="container-fluid mt-3">
-        <div className="row text-center text-white">
+        <div className="row text-white">
           <div className="col-md-2 d-none d-md-block d-sm-none">
             <Sidenav />
           </div>
           <div className="col-md-8 main-content">
-	        <h1>Workspace</h1>
-	        <ChatWindow />
+	        <h1 className="p-2">Workspace</h1>
+	        <ChatWindow setQuickActions={setQuickActions} />
           </div>
           <div className="col-md-2 d-none d-md-block d-sm-none">
-            <QuickActions />
+            <QuickActions options={quickActions} />
           </div>
         </div>
       </div>

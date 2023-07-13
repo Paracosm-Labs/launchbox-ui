@@ -21,7 +21,7 @@ function Game() {
 	        <Course />
           </div>
           <div className="col-md-2 d-none d-md-block d-sm-none">
-            <QuickActions />
+            Quick Actions
           </div>
         </div>
       </div>
